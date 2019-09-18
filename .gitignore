@@ -1,0 +1,8 @@
+# stuff
+untracked/*
+
+# untrack virtualenv
+bin/
+include/
+lib/
+lib64/

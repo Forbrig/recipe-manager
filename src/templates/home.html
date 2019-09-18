@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>HOME</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card-box">
+            <div class="text-center">
+                <h4 class="mb-1">Recipes</h4>
+                <p class="text-muted font-14">Your list of recipes</p>
+            </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-6">
+                    <h5 class="font-normal text-muted">Registered Recipes</h5>
+                    <h3 class="m-b-30">123</h3>
+                </div>
+                {% comment %} <div class="col-6">
+                    <h5 class="font-normal text-muted">Number of employees</h5>
+                    <h3 class="m-b-30">3.1k</h3>
+                </div> {% endcomment %}
+            </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-12">
+                    <h5 class="font-normal text-muted">Last registered</h5>
+
+                    <ul class="col-12" style="list-style:none; display:inline-flex;">
+                        <li class="col-2">
+                            <a href="https://www.allrecipes.com/recipe/73124/slow-cooker-salisbury-steak/?internalSource=streams&amp;referringContentType=Recipe Hub&amp;clickId=st_recipes_mades">
+                                <img style="width:100%" title="Slow Cooker Salisbury Steak" src="https://images.media-allrecipes.com/userphotos/140x140/4036171.jpg">
+                            </a>
+                            <div style="overflow: hidden; text-overflow:ellipsis; white-space:nowrap;">
+                                <a href="">Slow Cooker Salisbury Steak</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card-box">
+            <div class="text-center">
+                <h4 class="mb-1">Ingredients</h4>
+                <p class="text-muted font-14">Your list of ingredients</p>
+            </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-6">
+                    <h5 class="font-normal text-muted">Registered Ingredients</h5>
+                    <h3 class="m-b-30">123</h3>
+                </div>
+                {% comment %} <div class="col-6">
+                    <h5 class="font-normal text-muted">Number of employees</h5>
+                    <h3 class="m-b-30">47k</h3>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <ul style="list-style: none;">
+    <li class="list-recipes__recipe">
+        <a href="https://www.allrecipes.com/recipe/73124/slow-cooker-salisbury-steak/?internalSource=streams&amp;referringContentType=Recipe Hub&amp;clickId=st_recipes_mades">
+            <img class="taste-recipe-image ng-isolate-scope" title="Slow Cooker Salisbury Steak" src="https://images.media-allrecipes.com/userphotos/140x140/4036171.jpg">
+        </a>
+        <div>
+            <a href="">
+                <h3 data-ellipsis="" class="ng-isolate-scope">Slow Cooker Salisbury Steak</h3>
+            </a>
+            <div class="list-recipes__ratings">
+                <div>
+                    <span class="stars stars-4-5" onclick="AnchorScroll('reviews')" data-ratingstars="4.54872226715088" aria-label="Rated 4.55 out of 5 stars"></span>
+                </div>
+                <span class="list-recipes__reviews">2K</span>
+            </div>
+        </div>
+    </li>
+</ul> -->
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% comment %} <h1> app {{ ingredient.title }} </h1>
+<p>
+    {% if ingredient.description %}
+        {{ ingredient.description }}
+    {% else %}
+        Description comming soon
+    {% endif %}
+</p> {% endcomment %}
+
+<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody id="ingredients_table_body">
+    </tbody>
+</table>
+
+{% comment %} <script src="{% static 'ingredients.js' %}"></script> {% endcomment %}
+
+{% endblock content %}

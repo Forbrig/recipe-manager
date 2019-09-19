@@ -33,6 +33,8 @@
         
     </body>
 
+    {% include "ingredients/ingredientModal.html" %}
+    
     <!-- jquery js -->
     <script src="{% static 'plugins/jquery-3.4.1/jquery-3.4.1.min.js' %}"></script>
 
@@ -42,7 +44,12 @@
     <!-- datatable js -->
     <script src="{% static 'plugins/datatables-1.10.18/datatables.min.js' %}"></script>
 
+    <!-- maskmoney js -->
+    <script src="{% static 'plugins/maskmoney-3.1.1/maskmoney-3.1.1.js' %}"></script>
+
     <!-- own js -->
     <script src="{% static 'js/home.js' %}"></script>
+    <script src="{% static 'ingredients.js' %}"></script>
+
 
 </html>

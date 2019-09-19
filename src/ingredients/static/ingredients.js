@@ -7,10 +7,22 @@ $(document).ready(function () {
         buttons: ['copy', 'excel', 'pdf']
     });
 
+    var input = $(".maskmoney").maskMoney({thousands: ",", decimal: ".", suffix: " €"});
+    input.maskMoney('mask', 0.00);
+
     // table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 
     loadIngredients();
+
+    
 })
+
+$('#newIngredient').click(function() {
+    console.log('newIngredient');
+    
+    $('#ingredientModal').modal('show');
+})
+
 
 function loadIngredients() {
     $.post('ingredients/',{

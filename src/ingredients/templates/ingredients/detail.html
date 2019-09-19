@@ -11,19 +11,25 @@
         Description comming soon
     {% endif %}
 </p> {% endcomment %}
-
-<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-
-    <tbody id="ingredients_table_body">
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-12">
+        <button id="newIngredient" class="btn btn-danger w-md mb-4 float-right"><i class="fa fa-plus"></i> New Ingredient</button>
+    </div>
+    <div class="col-12">
+        <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+        
+            <tbody id="ingredients_table_body">
+            </tbody>
+        </table>
+    </div>
+</div>
 
 {% comment %} <script src="{% static 'ingredients.js' %}"></script> {% endcomment %}
 

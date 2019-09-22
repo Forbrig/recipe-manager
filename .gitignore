@@ -8,4 +8,5 @@ lib/
 lib64/
 
 # python stuff
-__pycache__
+__pycache__/
+*.py[cod]

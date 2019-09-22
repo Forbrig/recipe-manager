@@ -6,3 +6,6 @@ bin/
 include/
 lib/
 lib64/
+
+# python stuff
+__pycache__

@@ -9,21 +9,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="field-1" class="control-label">Name</label>
-                            <input type="text" class="form-control" id="field-1" placeholder="John">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="field-2" class="control-label">Surname</label>
-                            <input type="text" class="form-control" id="field-2" placeholder="Doe">
-                        </div>
-                    </div>
-                </div> -->
                 <div class="row">
+                    <input type="text" class="form-control d-none" id="ingredient-id">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="ingredient-name" class="control-label">Name</label>
@@ -35,7 +22,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="ingredient-price" class="control-label">Price</label>
-                            <input type="text" class="form-control text-center maskmoney" id="ingredient-price" val="0,00">
+                            <input type="text" class="form-control text-center maskmoney" id="ingredient-price">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -53,7 +40,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="ingredient-ammount" class="control-label">Ammount</label>
-                            <input type="number" class="form-control" id="ingredient-ammount" placeholder="Choose an ammount...">
+                            <input type="number" class="form-control text-center" id="ingredient-ammount" placeholder="Choose an ammount...">
                         </div>
                     </div>
                 </div>
@@ -67,8 +54,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="saveNewIngredient" type="button" class="btn btn-outline-danger">Save</button>
             </div>
         </div>
     </div>

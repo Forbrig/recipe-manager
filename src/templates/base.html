@@ -16,6 +16,9 @@
         <!-- datatable css -->
         <link rel="stylesheet" type="text/css" href="{% static 'plugins/datatables-1.10.18/datatables.min.css' %}">
 
+        <!-- alertify css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'plugins/alertifyjs-1.11.4/css/alertify.min.css' %}">
+
         <!-- own css -->
         <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 
@@ -23,14 +26,12 @@
 
     <body>
         {% include 'navbar.html' %}
-
         <div class="row-fluid d-flex justify-content-center">
-            <div class="col-9 mt-4">
+            <div class="col-12 col-md-7 mt-4">
                 {% block content %}
                 {% endblock content %}
             </div>
         </div>
-        
     </body>
 
     {% include "ingredients/ingredientModal.html" %}
@@ -47,9 +48,10 @@
     <!-- maskmoney js -->
     <script src="{% static 'plugins/maskmoney-3.1.1/maskmoney-3.1.1.js' %}"></script>
 
+    <!-- alertify js -->
+    <script src="{% static 'plugins/alertifyjs-1.11.4/alertify.min.js' %}"></script>
+
     <!-- own js -->
     <script src="{% static 'js/home.js' %}"></script>
     <script src="{% static 'ingredients.js' %}"></script>
-
-
 </html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row"> {% csrf_token %}
+    <div class="col-12">
+        <span class="h1">Recipes</span>
+        <button id="newRecipe" class="btn btn-danger w-md mb-4 float-right"><i class="fa fa-plus"></i> New Recipe</button>
+    </div>
+    <div class="col-12">
+        <table id="recipesTable" class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Preparation</th>
+                    <th class="text-center" style="max-width: 80px;">Price (€)</th>
+                    <th class="text-center" style="max-width: 80px;">Actions</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+    {% include "recipe/recipeModal.html" %}
+    {% include "recipe/recipeIngredientModal.html" %}
+{% endblock modal %}
+
+{% block js %}
+    <script src="{% static 'recipe/recipe.js' %}"></script>
+{% endblock js %}

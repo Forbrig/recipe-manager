@@ -17,14 +17,21 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_view, recipes_view
-from ingredients.views import ingredients_view, ingredients_list_all, ingredients_save, ingredients_delete
+from recipe.views import recipe_view, recipe_list_all, recipe_save, recipe_delete, autocomplete_ingredients, recipe_ingredient_save, recipe_ingredient_delete, recipe_ingredients_load, ingredient_view, ingredient_list_all, ingredient_save, ingredient_delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
-    path('recipes/', recipes_view),
-    path('ingredients/', ingredients_view),
-    path('ingredients/list', ingredients_list_all),
-    path('ingredients/save', ingredients_save),
-    path('ingredients/delete', ingredients_delete)
+    path('recipes/', recipe_view, name='recipes'),
+    path('recipe_list', recipe_list_all),
+    path('recipe_save', recipe_save),
+    path('recipe_delete', recipe_delete),
+    path('autocomplete_ingredients', autocomplete_ingredients),
+    path('recipe_ingredients_load', recipe_ingredients_load),
+    path('recipe_ingredient_save', recipe_ingredient_save),
+    path('recipe_ingredient_delete', recipe_ingredient_delete),
+    path('ingredients/', ingredient_view, name='ingredients'),
+    path('ingredient_list', ingredient_list_all),
+    path('ingredient_save', ingredient_save),
+    path('ingredient_delete', ingredient_delete)
 ]

@@ -10,6 +10,12 @@
         <!-- bootstrap css -->
         <link rel="stylesheet" type="text/css" href="{% static 'plugins/bootstrap-4.3.1/css/bootstrap.min.css' %}">
 
+        <!-- jqueryui css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'plugins/jquery-ui-1.12.1/jquery-ui.min.css' %}">
+
+        <!-- jqueryui theme css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'plugins/jquery-ui-1.12.1/jquery-ui.theme.css' %}">
+
         <!-- fonawesome css -->
         <link rel="stylesheet" type="text/css" href="{% static 'plugins/fontawesome-free-5.10.2/css/all.min.css' %}">
 
@@ -20,24 +26,29 @@
         <link rel="stylesheet" type="text/css" href="{% static 'plugins/alertifyjs-1.11.4/css/alertify.min.css' %}">
 
         <!-- own css -->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     </head>
 
     <body>
         {% include 'navbar.html' %}
         <div class="row-fluid d-flex justify-content-center">
-            <div class="col-12 col-md-7 mt-4">
+            <div class="col-12 col-lg-7 mt-4">
                 {% block content %}
                 {% endblock content %}
             </div>
         </div>
     </body>
 
-    {% include "ingredients/ingredientModal.html" %}
+    {% comment %} include mddals from the page here so it is loaded after everything above and just is included when you are on that page {% endcomment %}
+    {% block modal %}
+    {% endblock modal %}
     
     <!-- jquery js -->
     <script src="{% static 'plugins/jquery-3.4.1/jquery-3.4.1.min.js' %}"></script>
+    
+    <!-- jqueryui js -->
+    <script src="{% static 'plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
 
     <!-- bootstrap js -->
     <script src="{% static 'plugins/bootstrap-4.3.1/js/bootstrap.min.js' %}"></script>
@@ -51,7 +62,13 @@
     <!-- alertify js -->
     <script src="{% static 'plugins/alertifyjs-1.11.4/alertify.min.js' %}"></script>
 
+    <!-- bootbox js -->
+    <script src="{% static 'plugins/bootbox-5.3.2/bootbox.min.js' %}"></script>
+
     <!-- own js -->
     <script src="{% static 'js/home.js' %}"></script>
-    <script src="{% static 'ingredients.js' %}"></script>
+
+    {% comment %} include js from the page here so it is loaded after everything above and just is included when you are on that page {% endcomment %}
+    {% block js %}
+    {% endblock js %}
 </html>

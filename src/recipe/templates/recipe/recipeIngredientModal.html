@@ -1,0 +1,57 @@
+<div id="recipeIngredientModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header pl-0">
+                <h5 class="modal-title w-100 text-center position-absolute">Add Ingredient</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-12 p-0 m-0 row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="ingredient-recipe-name" class="control-label">Name</label>
+                                    <button id="showRecipeIngredientSearch" class="btn btn-sm btn-outline-secondary float-right"><i class="fa fa-search"></i>Search</button>
+                                    <input type="text" class="form-control d-none" id="ingredient-id">
+                                    <input type="text" class="form-control ingredientSearch" readonly id="ingredient-recipe-name">
+                                    <input style="display:none" type="text" class="form-control ingredientSearch" id="autocomplete_ingredients" placeholder="Search for the ingredient name...">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ingredient-recipe-measure" class="control-label">Measure Unit</label>
+                                    <select class="form-control" readonly id="ingredient-recipe-measure">
+                                        <option class="default-measure" disabled selected value="">Select a measure...</option> 
+                                        <option class="height-measure" disabled value="kg">Kilograms</option>
+                                        <option class="height-measure" disabled value="g">Grams</option>
+                                        <option class="volume-measure" disabled value="l">Liters</option>
+                                        <option class="volume-measure" disabled value="cl">Centiliters</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ingredient-recipe-ammount" class="control-label">Ammount</label>
+                                    <input type="number" class="form-control text-center" id="ingredient-recipe-ammount">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ingredient-recipe-price" class="control-label">Price</label>
+                                    <input type="text" data-price="0.00" data-measure="none" data-ammount="0" class="form-control text-center maskmoney" readonly id="ingredient-recipe-price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="addRecipeIngredient" type="button" class="btn btn-outline-danger"><i class="fa fa-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>

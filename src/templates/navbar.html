@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-menu static-top">
-    <div class="container col-12 col-md-7">
+    <div class="container col-12 col-lg-7">
         <a class="navbar-brand font-weight-bold" href="/"><i class="fa fa-hamburger"></i> Recipe Manager</a>
         <a class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
            <i class="fa fa-book-open"></i>
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-            <a class="nav-link font-weight-bold" href="/">Home</a>
-            <a class="nav-link font-weight-bold" href="/recipes">Recipes</a>
-            <a class="nav-link font-weight-bold" href="/ingredients">Ingredients</a>
+            <a class="nav-link font-weight-bold {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link font-weight-bold {% if request.resolver_match.url_name == 'recipes' %}active{% endif %}" href="/recipes">Recipes</a>
+            <a class="nav-link font-weight-bold {% if request.resolver_match.url_name == 'ingredients' %}active{% endif %}" href="/ingredients">Ingredients</a>
         </div>
     </div>
 </nav>
